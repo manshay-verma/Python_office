@@ -1,0 +1,10 @@
+<!-- display_hotel_images.html -->
+
+<h2>Uploaded Hotel Images</h2>
+
+{% for hotel in hotel_images %}
+    <div style="margin-bottom: 20px;">
+        <p>{{ hotel.title }}</p>
+        <img src="{{ hotel.file.url }}" alt="{{ hotel.title }}" style="width: 300px; height: auto;">
+    </div>
+{% endfor %}

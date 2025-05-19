@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image App Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📁 Image App</h1>
+
+    <a href="{% url 'search_image' %}">
+        <button>🔍 Search Image</button>
+    </a>
+
+    <a href="{% url 'upload' %}">
+        <button>📤 Upload Image</button>
+    </a>
+
+</body>
+</html>

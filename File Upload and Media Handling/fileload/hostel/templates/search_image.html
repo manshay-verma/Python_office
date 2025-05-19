@@ -1,0 +1,16 @@
+<h2>Search Image by Title</h2>
+
+<form method="get" action="{% url 'search_image' %}">
+    <input type="text" name="q" placeholder="Enter image title..." required>
+    <button type="submit">Search</button>
+    
+</form>
+<a href="{% url 'home' %}">
+        <button>🔙 Back</button>
+</a>
+{% if image %}
+    <h3>Result for "{{ image.title }}"</h3>
+    <img src="{{ image.file.url }}" alt="{{ image.title }}" style="width: 400px;">
+{% elif request.GET.q %}
+    <p style="color:red;">Image not found.</p>
+{% endif %}
